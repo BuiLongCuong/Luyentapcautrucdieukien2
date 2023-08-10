@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b1>Nhập mét :</b1>
+<input type="text" id="nhap">
+<p id="result">Feet:</p>
+<button onclick="chuyen_doi()">Chuyển</button>
+<script>
+    function chuyen_doi() {
+        let a=+document.getElementById("nhap").value;
+        let b;
+        b=a*3.2808;
+        document.getElementById("result").innerHTML = "Feet: "+ b;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b>Nhập cạnh a :</b>
+<input type="text" id="nb1">
+<b>Nhập cạnh b :</b>
+<input type="text" id="nb2">
+<b>Nhập cạnh c :</b>
+<input type="text" id="nb3">
+<button onclick="tinh_toan()">Result</button>
+<script>
+    function tinh_toan() {
+        let a=+document.getElementById("nb1").value;
+        let b=+document.getElementById("nb2").value;
+        let c=+document.getElementById("nb3").value;
+        if(a>0 && b>0 && c>0 &&(a+b)>c &&(b+c)>a &&(a+c)>b) {
+            alert("3 số đã nhập sẽ tạo nên 1 tam giác");
+        }else {
+            alert("3 số đã nhập sẽ không tạo nên 1 tam giác")
+        }
+    }
+
+</script>
+</body>
+</html>

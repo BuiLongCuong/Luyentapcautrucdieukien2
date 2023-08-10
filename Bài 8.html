@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập số tuổi :</p>
+<input type="text" id="nhap">
+<button onclick="xem_xet()">Result</button>
+<script>
+    function xem_xet() {
+        let a=+document.getElementById("nhap").value;
+        if(a>0 && a<120){
+            alert("Hi guy!")
+        }else {
+            alert("Sống thọ thế.")
+        }
+    }
+
+</script>
+</body>
+</html>

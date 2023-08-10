@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Giải phương trình bậc nhất </h1>
+<p>Nhập các tham số của phương trình ax + b = 0</p>
+<b>Nhập số a :</b>
+<input type="text" id="nb1">
+<b>Nhập số b :</b>
+<input type="text" id="nb2">
+<button onclick="tinh_toan()">Kết quả</button>
+<p id="kq">Result :</p>
+<script>
+    function tinh_toan() {
+        let a=+document.getElementById("nb1").value;
+        let b=+document.getElementById("nb2").value;
+        let c;
+        c=-b/a;
+        if (a==0 && b==0){
+            document.getElementById("kq").innerHTML = "Result : Phương trình có vô số nghiệm"
+        }else if(a==0 && b!=0){
+            document.getElementById("kq").innerHTML = "Result : Phương trình vô nghiệm"
+        }else {
+            document.getElementById("kq").innerHTML = "Result : Phương trình có nghiệm duy nhất :" +c ;
+        }
+    }
+</script>
+</body>
+</html>

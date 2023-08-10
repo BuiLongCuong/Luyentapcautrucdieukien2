@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Giải phương trình bậc 2</h1>
+<p>Nhập các tham số của phương trình bậc 2 :ax<sup>2</sup>+bx+c=0
+</p>
+<b>Nhập số a :</b>
+<input type="text" id="nb1">
+<b>Nhập số b :</b>
+<input type="text" id="nb2">
+<b>Nhập số c :</b>
+<input type="text" id="nb3">
+<button onclick="tinh_toan()">Kết quả</button>
+<p id="kq">Result :</p>;
+<script>
+    function tinh_toan() {
+        let a=+document.getElementById("nb1").value;
+        let b=+document.getElementById("nb2").value;
+        let c=+document.getElementById("nb3").value;
+        let d;
+        d=b*b-4*a*c;
+        let e;
+        e=(-b+Math.sqrt(d))/2*a;
+        let g;
+        g=(-b-Math.sqrt(d))/2*a;
+        if(d<0){
+            document.getElementById("kq").innerHTML = "Result : Phương trình vô nghiệm."
+        }else if(d===0) {
+            document.getElementById("kq").innerHTML = "Result : Phương trình có nghiệm kép "+ "x1 = x2 =" + -b/2*a;
+        }else if(d>0) {
+            document.getElementById("kq").innerHTML = "Result : Phương trình có 2 nghiệm phân biệt "+"x1 = "+e+" và x2 = "+g;
+        }
+    }
+
+</script>
+</body>
+</html>

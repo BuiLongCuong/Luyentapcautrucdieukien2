@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b>Bậc giá bán lẻ điện sinh hoạt :</b>
+<ol>
+    <li>Bậc 1: Từ 0-50kWh: 1.728 đồng/kWh</li>
+    <li>Bậc 2: Từ 51 – 100 kWh: 1.786 đồng/kWh</li>
+    <li>Bậc 3: Từ 101 – 200 kWh: 2.074 đồng/kWh</li>
+    <li>Bậc 4: Từ 201 – 300 kWh: 2.612 đồng/kWh</li>
+</ol>
+<b>Nhập số kWh/tháng:</b>
+<input type="text" id="nhap">
+<button onclick="tinh_toan()">Tính</button>
+<p id="kq">Số tiền cần trả :</p>
+<script>
+    function tinh_toan() {
+        let a=+document.getElementById("nhap").value;
+        if(a>0 && a<=50){
+            document.getElementById("kq").innerHTML = "Số tiền cần trả : "+ a*1.728+"Đ"
+        }else if(a>=51 && a<=100){
+            document.getElementById("kq").innerHTML = "Số tiền cần trả : "+ a*1.786+"Đ"
+        }else if(a>=101 && a<=200) {
+            document.getElementById("kq").innerHTML = "Số tiền cần trả : "+ a*2.074+"Đ"
+        }else if(a>=201 && a<=300){
+            document.getElementById("kq").innerHTML = "Số tiền cần trả : "+ a*2.612+"Đ"
+        }else {
+            document.getElementById("kq").innerHTML = "Số tiền cần trả : "+ a*3+"Đ"
+        }
+    }
+
+</script>
+</body>
+</html>

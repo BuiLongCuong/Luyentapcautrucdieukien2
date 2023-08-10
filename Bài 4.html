@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<b>Nhập cạnh a(m) :</b>
+<input type="text" id="nhap">
+<b>Nhập cạnh b(m) :</b>
+<input type="text" id="nhap1">
+<button onclick="chuyen_doi()">Tính</button>
+<p id="result">Diện tích hình chữ nhật :</p>
+<script>
+    function chuyen_doi() {
+        let a=+document.getElementById("nhap").value;
+        let b=+document.getElementById("nhap1").value;
+        let c;
+        c=a*b;
+        document.getElementById("result").innerHTML = "Diện tích hình vuông: "+ c+" mét vuông";
+    }
+</script>
+</body>
+</html>
